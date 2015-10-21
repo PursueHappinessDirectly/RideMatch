@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-.menu ul{
+/**.menu ul{
   list-style:none;
   padding-left:0
 }
@@ -54,28 +54,31 @@
   margin:0 0 0 10px;
   width:24px
 }
+**/
 
 a.btn{
-	margin: 600px 50px 0;
+	margin: 200px 100px 0;
 	//background-color: rgba(255,255,255,0.8);
   width: 6em;  
   height:2em;
   font-size: 28px
 }
 
+/**
 .jumbotron{
 	background: url('https://dl.dropboxusercontent.com/u/162995282/1.jpg') center center;
 	background-size: cover;
   width: 100%;
   min-height: 800px;
 }
+**/
 
 .hvr-fade {
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: translateZ(0);
   transform: translateZ(0);
-  box-shadow: 0 0 1px rgba(255,255,255,0.8);
+  box-shadow: 0 0 1px rgba(0,0,0,0.8);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   -moz-osx-font-smoothing: grayscale;

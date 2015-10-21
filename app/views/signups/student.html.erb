@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body> 
+
+        <p>Personal Information</p>
+        
+ <div class="jumbotron">
+         
+        <%= form_for Signup.new do |f| %>
+          <div class="field"> 
+    		<%= f.text_field :first_name, :placeholder => "First Name" %><br>
+    		<br>
+  		<%= f.text_field :last_name, :placeholder => "Last Name" %><br>
+    		<br>
+    		<%= f.text_field :gender, :placeholder => "Gender" %><br>
+    		<br>
+    		<%= f.text_field :email, :placeholder => "Email" %><br>
+    		<br>
+       		<%= f.text_field :phone_number, :placeholder => "Mobile" %><br>
+   		<br>
+    		<br>
+  	  </div>
+  	  <%= f.submit "Next", class:'btn' %>
+        <% end %>
+          
+
+
+	
+
+	
+ </div>
+ 
+
+</body>
+</html>

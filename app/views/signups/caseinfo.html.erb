@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body> 
+
+        <p>Flight Information</p>
+        
+ <div class="jumbotron">
+         
+        <%= form_for Signup.new do |f| %>
+          <div class="field"> 
+    		<%= f.text_field :first_name, :placeholder => "Last flight number" %><br>
+    		<br>
+  		    <%= f.text_field :last_name, :placeholder => "Number of baggage" %><br>
+    		<br>
+    		<%= f.text_field :gender, :placeholder => "Arriving time" %><br>
+    		<br>
+    		<%= f.text_field :email, :placeholder => "Local destination" %><br>
+       		<br>
+    		<br>
+  	  </div>
+  	  <%= f.submit "Post", class:'btn' %>
+        <% end %>
+          
+
+
+	
+
+	
+ </div>

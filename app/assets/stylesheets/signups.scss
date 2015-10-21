@@ -1,0 +1,22 @@
+// Place all the styles related to the Signups controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.jumbotron .btn {
+  margin: 10px 0 0;
+  float: left; 
+}
+
+.jumbotron form {
+  text-align: left;
+}
+
+
+.btn:hover {
+  background: #117bff;
+  cursor: pointer; 
+  transition: background .5s;  
+}
+
+
+
