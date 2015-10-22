@@ -6,25 +6,36 @@
 <div class="jumbotron">
          
         <%= form_for(:signup, url: signups_path) do |f| %>
-          <div class="field"> 
-            <%= f.label :first_name %>
+        <div class="field"> 
+            <%= f.label :first_name %><br>
     		<%= f.text_field :first_name, :placeholder => "First name" %><br>
     		<br>
-    		<%= f.label :last_name %>
-  	    	<%= f.text_field :last_name, :placeholder => "Last name" %><br>
+    		<%= f.label :last_name %><br>
+  	        <%= f.text_field :last_name, :placeholder => "Last name" %><br>
     		<br>
-    		<%= f.label :gender %>
-    		<%= f.text_field :gender, :placeholder => "Gender" %><br>
+            <%= f.label :last_flight_number %><br> 
+    		<%= f.text_field :last_flight_number, :placeholder => "Last flight number" %><br>
     		<br>
-    		<%= f.label :email_field %>
+    		<%= f.label :arriving_time %><br>
+    		<%= f.date_field :arriving_time, :placeholder => "Arriving time" %><br>
+    		<br>
+    		<%= f.label :number_baggage %><br>
+  		    <%= f.number_field :number_baggage, :placeholder => "Number of baggage" %><br>
+    		<br>
+    		<%= f.label :destination %><br>
+    		<%= f.text_field :destination, :placeholder => "Local destination" %><br>
+         	<br>
+    		<%= f.label :email_field %><br>
     		<%= f.email_field :email, :placeholder => "Email" %><br>
     		<br>
-    		<%= f.label :phone_number %>
-       		<%= f.phone_field :phone_number, :placeholder => "Mobile" %><br>
-   	    	<br>
+    		<%= f.label :phone_number %><br>
+         	<%= f.phone_field :phone_number, :placeholder => "Mobile" %><br>
+   	        <br>
     		<br>
   	      </div>
-  	    <%= f.submit "Next", class:'btn' %>
+  	    <%= f.submit "Post", class:'btn' %>
+  	    
+  	    
         <% end %>
           
 

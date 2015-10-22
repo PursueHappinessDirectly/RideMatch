@@ -3,13 +3,15 @@ class SignupsController < ApplicationController
         @signup = Signup.new
     end
     
+    def indexS 
+        @signup = Signup.all 
+    end
     
     def create
         @signup = Signup.new(signup_params)
         if @signup.save
-            redirect_to '/continue'
+            redirect_to '/posts'
         else
-            logger.debug 'Just do it'
             render '/student'
         end
     end
@@ -17,7 +19,7 @@ class SignupsController < ApplicationController
     private
   
     def signup_params
-        params.require(:signup).permit(:last_name, :first_name, :gender, :email, :phone_number)
+        params.require(:signup).permit(:first_name, :last_name, :last_flight_number, :arriving_time, :number_baggage, :destination, :email, :phone_number)
     end
     
 

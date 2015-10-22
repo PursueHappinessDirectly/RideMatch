@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body> 
+
+<% @signup.each do |t| %>
+    <p><%= t.first_name %> <%= t.last_name %></p>
+    <p><%= t.last_flight_number %> <%= t.arriving_time %></p>
+    <p><%= t.number_baggage %></p>
+    <p><%= t.destination %></p>
+    <p><%= t.email %> <%= t.phone_number %></p>
+<% end %>
+
+</body>
+</html>

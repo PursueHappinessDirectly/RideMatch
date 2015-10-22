@@ -14,23 +14,26 @@
 ActiveRecord::Schema.define(version: 20151021043806) do
 
   create_table "cases", force: :cascade do |t|
-    t.text     "last_flight_number"
-    t.text     "arriving_time"
-    t.text     "number_baggage"
-    t.text     "destination"
-    t.integer  "signups_id"
+    t.string   "last_flight_number"
+    t.string   "arriving_time"
+    t.string   "number_baggage"
+    t.string   "destination"
+    t.integer  "signup_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "signups", force: :cascade do |t|
-    t.text     "last_name"
-    t.text     "first_name"
-    t.text     "gender"
-    t.text     "email"
-    t.text     "phone_number"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "last_flight_number"
+    t.string   "arriving_time"
+    t.string   "number_baggage"
+    t.string   "destination"
+    t.string   "email"
+    t.string   "phone_number"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

@@ -7,13 +7,17 @@
  <div class="jumbotron">
          
         <%= form_for Case.new do |f| %>
-          <div class="field"> 
+          <div class="field">
+            <%= f.label :last_flight_number %><br> 
     		<%= f.text_field :last_flight_number, :placeholder => "Last flight number" %><br>
     		<br>
+    		<%= f.label :number_baggage %><br>
   		    <%= f.number_field :number_baggage, :placeholder => "Number of baggage" %><br>
     		<br>
+    		<%= f.label :arriving_time %><br>
     		<%= f.date_field :arriving_time, :placeholder => "Arriving time" %><br>
     		<br>
+    		<%= f.label :destination %><br>
     		<%= f.text_field :destination, :placeholder => "Local destination" %><br>
        		<br>
     		<br>
