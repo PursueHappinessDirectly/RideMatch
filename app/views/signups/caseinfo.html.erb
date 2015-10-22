@@ -2,23 +2,23 @@
 <html>
 <body> 
 
-        <p>Flight Information</p>
+<p>Flight Information</p>
         
  <div class="jumbotron">
          
-        <%= form_for Signup.new do |f| %>
+        <%= form_for Case.new do |f| %>
           <div class="field"> 
-    		<%= f.text_field :first_name, :placeholder => "Last flight number" %><br>
+    		<%= f.text_field :last_flight_number, :placeholder => "Last flight number" %><br>
     		<br>
-  		    <%= f.text_field :last_name, :placeholder => "Number of baggage" %><br>
+  		    <%= f.number_field :number_baggage, :placeholder => "Number of baggage" %><br>
     		<br>
-    		<%= f.text_field :gender, :placeholder => "Arriving time" %><br>
+    		<%= f.date_field :arriving_time, :placeholder => "Arriving time" %><br>
     		<br>
-    		<%= f.text_field :email, :placeholder => "Local destination" %><br>
+    		<%= f.text_field :destination, :placeholder => "Local destination" %><br>
        		<br>
     		<br>
-  	  </div>
-  	  <%= f.submit "Post", class:'btn' %>
+  	      </div>
+  	    <%= f.submit "Post", class:'btn' %>
         <% end %>
           
 
@@ -27,3 +27,5 @@
 
 	
  </div>
+ </body>
+</html>

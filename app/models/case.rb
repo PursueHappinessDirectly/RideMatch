@@ -1,3 +1,3 @@
 class Case < ActiveRecord::Base
-    belongs_to :signups
+    belongs_to :signup
 end

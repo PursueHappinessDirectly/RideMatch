@@ -9,7 +9,7 @@ class SignupsController < ApplicationController
         if @signup.save
             redirect_to '/continue'
         else
-            render '/continue'
+            render '/student'
         end
     end
     
@@ -23,7 +23,5 @@ class SignupsController < ApplicationController
         params.require(:signup).permit(:phone_number)
     end
     
-    def caseinfo
-    end
 
 end

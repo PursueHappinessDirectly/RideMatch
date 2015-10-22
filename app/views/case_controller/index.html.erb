@@ -1,6 +1,13 @@
-<% @case_controller.each do |case| %> 
-<div class="case"> 
-  <p class="content"><%= case.content %></p> 
-  <p class="time"><%= case.created_at %></p> 
-</div> 
+<!DOCTYPE html>
+<html>
+<body> 
+
+<% @case.each do |t| %>
+    <p><%= t.last_flight_number %></p>
+    <p><%= t.number_baggage %></p>
+    <p><%= t.arriving_time %></p>
+    <p><%= t.destination %></p>
 <% end %>
+
+</body>
+</html>

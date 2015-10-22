@@ -3,7 +3,9 @@ Rails.application.routes.draw do
     get '/student' => 'signups#student'
     get '/continue' => 'signups#caseinfo'
     get '/posts' => 'case_controller#index'
-    resources :signups
+    #get '/posts/:id' => 'books#show', as: :bookshow
+    resources :signups, controller: 'signups' 
+    resources :cases,  controller: 'case_controller'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
