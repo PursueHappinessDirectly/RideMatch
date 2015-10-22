@@ -11,17 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151021043806) do
-
-  create_table "cases", force: :cascade do |t|
-    t.string   "last_flight_number"
-    t.string   "arriving_time"
-    t.string   "number_baggage"
-    t.string   "destination"
-    t.integer  "signup_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+ActiveRecord::Schema.define(version: 20151022194542) do
 
   create_table "signups", force: :cascade do |t|
     t.string   "first_name"
@@ -30,6 +20,17 @@ ActiveRecord::Schema.define(version: 20151021043806) do
     t.string   "arriving_time"
     t.string   "number_baggage"
     t.string   "destination"
+    t.string   "email"
+    t.string   "phone_number"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "volunsignups", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "car_type"
+    t.string   "car_capacity"
     t.string   "email"
     t.string   "phone_number"
     t.datetime "created_at"

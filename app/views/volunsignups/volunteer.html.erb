@@ -2,10 +2,10 @@
 <html>
 <body> 
 
-<p>Post Information</p>
+<p>Volunteer Information</p>
 <div class="jumbotron">
          
-        <%= form_for(:signup, url: signups_path) do |f| %>
+        <%= form_for(:volunsignup, url: volunsignups_path) do |f| %>
         <div class="field"> 
             <%= f.label :first_name %><br>
     		<%= f.text_field :first_name, :placeholder => "First name" %><br>
@@ -13,18 +13,12 @@
     		<%= f.label :last_name %><br>
   	        <%= f.text_field :last_name, :placeholder => "Last name" %><br>
     		<br>
-            <%= f.label :last_flight_number %><br> 
-    		<%= f.text_field :last_flight_number, :placeholder => "Last flight number" %><br>
+    		<%= f.label :car_type %><br>
+    		<%= f.text_field :car_type, :placeholder => "Car type" %><br>
     		<br>
-    		<%= f.label :arriving_time %><br>
-    		<%= f.date_field :arriving_time, :placeholder => "Arriving time" %><br>
+    		<%= f.label :car_capacity %><br>
+  		    <%= f.number_field :car_capacity, :placeholder => "Capacity" %><br>
     		<br>
-    		<%= f.label :number_baggage %><br>
-  		    <%= f.number_field :number_baggage, :placeholder => "Number of baggage" %><br>
-    		<br>
-    		<%= f.label :destination %><br>
-    		<%= f.text_field :destination, :placeholder => "Local destination" %><br>
-         	<br>
     		<%= f.label :email_field %><br>
     		<%= f.email_field :email, :placeholder => "Email" %><br>
     		<br>
@@ -33,7 +27,7 @@
    	        <br>
     		<br>
   	      </div>
-  	    <%= f.submit "Post", class:'btn' %>
+  	    <%= f.submit "View posts", class:'btn' %>
   	    
   	    
         <% end %>
