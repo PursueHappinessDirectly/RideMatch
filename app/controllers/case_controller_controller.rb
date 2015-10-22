@@ -19,10 +19,7 @@ end
 
 private
     def case_params
-        params.require(:case).permit(:last_flight_number)
-        params.require(:case).permit(:arriving_time)
-        params.require(:case).permit(:number_baggage)
-        params.require(:case).permit(:destination)
+        params.require(:case).permit(:last_flight_number, :arriving_time, :number_baggage, :destination)
     end
 
 #def show

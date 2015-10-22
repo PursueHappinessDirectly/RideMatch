@@ -9,6 +9,7 @@ class SignupsController < ApplicationController
         if @signup.save
             redirect_to '/continue'
         else
+            logger.debug 'Just do it'
             render '/student'
         end
     end
@@ -16,11 +17,7 @@ class SignupsController < ApplicationController
     private
   
     def signup_params
-        params.require(:signup).permit(:last_name)
-        params.require(:signup).permit(:first_name)
-        params.require(:signup).permit(:gender)
-        params.require(:signup).permit(:email)
-        params.require(:signup).permit(:phone_number)
+        params.require(:signup).permit(:last_name, :first_name, :gender, :email, :phone_number)
     end
     
 
