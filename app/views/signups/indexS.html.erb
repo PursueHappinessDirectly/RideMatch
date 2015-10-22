@@ -3,11 +3,11 @@
 <body> 
 
 <% @signup.each do |t| %>
-    <p><%= t.first_name %> <%= t.last_name %></p>
-    <p><%= t.last_flight_number %> <%= t.arriving_time %></p>
-    <p><%= t.number_baggage %></p>
-    <p><%= t.destination %></p>
-    <p><%= t.email %> <%= t.phone_number %></p>
+    <p>Name: <%= t.first_name %> <%= t.last_name %></p>
+    <p>Flight Number: <%= t.last_flight_number %> Time of Arrival: <%= t.arriving_time %></p>
+    <p># of Bags: <%= t.number_baggage %></p>
+    <p>Destination: <%= t.destination %></p>
+    <p>Email: <%= t.email %> Phone Number: <%= t.phone_number %></p>
 <% end %>
 
 </body>
