@@ -4,12 +4,20 @@
 
 <% @signup.each do |t| %>
     <p>Name: <%= t.first_name %> <%= t.last_name %></p>
+<<<<<<< HEAD
     <p>Filght: <%= t.last_flight_number %>, Time: <%= t.arriving_time %></p>
     <p>Baggae number: <%= t.number_baggage %></p>
     <p>Destination: <%= t.destination %></p>
     <p>Email: <%= t.email %>, Mobile: <%= t.phone_number %></p>
     <hr>
 
+=======
+    <p>Flight Number: <%= t.last_flight_number %> Time of Arrival: <%= t.arriving_time %></p>
+    <p># of Bags: <%= t.number_baggage %></p>
+    <p>Destination: <%= t.destination %></p>
+    <p>Email: <%= t.email %> Phone Number: <%= t.phone_number %></p>
+    <hr>
+>>>>>>> fdb0fddb59ebf54e927d3f92e449e141568d420c
 <% end %>
 
 </body>
