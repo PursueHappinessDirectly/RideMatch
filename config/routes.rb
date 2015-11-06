@@ -1,11 +1,26 @@
 Rails.application.routes.draw do
-    root 'pages#welcome'
-    get '/student' => 'signups#student'
-    get '/posts' => 'signups#indexS'
-    get '/volunteer' => 'volunsignups#volunteer' 
-
+    root 'signups#welcome'
+    get '/new' => 'signups#new'
+    get '/index' => 'signups#index'
+    get '/:id/edit' => 'signups#update'
+    
+    get '/requests/new' => 'requests#new'
+    post '/requests' => 'requests#create'
+    get '/requests/index' => 'requests#index'
+    get '/requests/:id' => 'requests#show', as: 'show_request'
+    get '/requests/:id/edit' => 'requests#edit'
+    patch '/requests/:id' => 'requests#update'
+    delete '/requests/:id' => 'requests#destroy'
+    
+    get '/accepts' => 'accepts#index'
+    get '/accepts/index' => 'accepts#index'
+    get '/accepts/:id' => 'accepts#show', as: 'show_accept'
+    get '/accepts/:id/edit' => 'accepts#edit'
+	patch '/accepts/:id' => 'accepts#update'
+    
+    resources :accepts, controller: 'accepts'
     resources :signups, controller: 'signups' 
-    resources :volunsignups, controller: 'volunsignups'
+    resources :requests, controller: 'requests'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

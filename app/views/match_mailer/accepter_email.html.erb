@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Dear, <%= @first_name_a %> <%= @last_name_a %></h1>
+    <p>
+      Thank you for your help! We really appreciate that you will help picking up! 
+      Here is your corresponding student information.  <br> 
+      Name: <%= @first_name_r %> <%= @last_name_r %><br>
+      Email: <%= @email_r %><br>
+      Mobile: <%= @phone_number_r %><br>
+      <br>
+      Last Filght number: <%= @case.last_flight_number %> <br>
+      Arriving date: <%= @case.arriving_time %> <br>
+      Number of baggage: <%= @case.number_baggage %> <br>
+      Destination: <%= @case.destination %> <br>
+    </p>
+    <p>
+      To check the post, just follow this link: <%= @url %>
+    </p>
+    <p>Thanks for using RideMatcher and have a great day!</p>
+    
+    <p>RideMatcher Team</p>
+    
+  </body>
+</html>

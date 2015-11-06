@@ -11,26 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151022194542) do
+ActiveRecord::Schema.define(version: 20151104045042) do
 
-  create_table "signups", force: :cascade do |t|
-    t.string   "first_name"
-    t.string   "last_name"
+  create_table "requests", force: :cascade do |t|
     t.string   "last_flight_number"
     t.string   "arriving_time"
     t.string   "number_baggage"
     t.string   "destination"
-    t.string   "email"
-    t.string   "phone_number"
+    t.string   "request_id"
+    t.string   "accept_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  create_table "volunsignups", force: :cascade do |t|
+  create_table "signups", force: :cascade do |t|
     t.string   "first_name"
     t.string   "last_name"
-    t.string   "car_type"
-    t.string   "car_capacity"
+    t.string   "username"
     t.string   "email"
     t.string   "phone_number"
     t.datetime "created_at"

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<body> 
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @signup.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @signup.last_name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @signup.email %>
+</p>
+
+<p>
+  <strong>Mobile:</strong>
+  <%= @signup.phone_number %>
+</p>
+
+<%= link_to 'Edit', edit_signup_path(@signup) %> |
+<%= link_to 'Back', signups_path %> 
+
+<div class="name col-xs-4">
+    <a class="btn hvr-fade" href="/requests/new">Post Ride</a>   
+</div> 
+
+<div class="name col-xs-6">
+    <a class="btn hvr-fade" href="/accepts/index">Pick Up</a>   
+</div> 
+
+
+
+ 
+
+</body>
+</html>
