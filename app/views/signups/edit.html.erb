@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body> 
+
+<p>Editing Profile Information</p>
+<div class="jumbotron">
+         
+        <%= form_for(@signup) do |f| %>
+        <div class="field"> 
+            <%= f.label :first_name %><br>
+    		<%= f.text_field :first_name, :placeholder => "First name" %><br>
+    		<br>
+    		<%= f.label :last_name %><br>
+  	        <%= f.text_field :last_name, :placeholder => "Last name" %><br>
+  	        <br>
+    		<%= f.label :email_field %><br>
+    		<%= f.email_field :email, :placeholder => "Email" %><br>
+    		<br>
+    		<%= f.label :phone_number %><br>
+         	<%= f.phone_field :phone_number, :placeholder => "Mobile" %><br>
+   	        <br>
+    		<br>
+  	      </div>  
+  	    <%= f.submit "Update",  class:'btn'%>    
+  	    
+        <% end %>
+          
+
+
+	
+
+	
+ </div>
+ 
+
+
+<%= link_to 'View', @signup %> |
+<%= link_to 'Back', signups_path %>
+
+</body>
+</html>

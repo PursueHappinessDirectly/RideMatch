@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<body> 
+
+<p id="notice"><%= notice %></p>
+
+<% @request.each do |t| %>
+    <p>Flight number: <%= t.last_flight_number %></p>
+    <p>Time Arrived: <%= t.arriving_time %></p>
+    <p>Number of baggage: <%= t.number_baggage %></p> 
+    <p>Destination: <%= t.destination %></p>
+    <td><%= link_to 'View', show_request_path(t) %></td> |
+    <td><%= link_to 'Edit', edit_request_path(t) %></td> |
+    <td><%= link_to 'Destroy', t,  method: :delete, data: { confirm: 'Are you sure to delete this ride request?' } %></td> |
+    <td><%= link_to 'Back', signups_path %></td>
+    <hr>
+<% end %>
+
+</body>
+</html>
